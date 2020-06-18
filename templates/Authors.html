@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block title %}Authors{% endblock %} {% block head
+%}
+<style>
+	body {
+		background-image: url(https://images2.alphacoders.com/261/thumb-1920-26102.jpg);
+	}
+	.boxtable {
+		width: 50%;
+		height: 100%;
+		margin: auto;
+		background: rgba(204, 204, 204, 0.9);
+		text-decoration: none;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 23px;
+	}
+	.listgen {
+		width: 31%;
+		margin: auto;
+		display: inline-flex;
+		text-align: center;
+		align-content: center;
+		font-style: italic;
+	}
+</style>
+{% endblock %} {% block content %}
+<br /><br />
+<div class="boxtable">
+	{% for th in auth %}
+	<div class="listgen">
+		<a href="/Authors/{{th}}" style="text-decoration: none; color: black;"
+			>{{th}}</a
+		>
+	</div>
+	{% endfor %}
+</div>
+<br /><br />
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Genres{% endblock %} {% block head %}
+<style>
+	body {
+		background-image: url(https://images2.alphacoders.com/261/thumb-1920-26102.jpg);
+	}
+	.boxtable {
+		max-width: 50%;
+		height: 100%;
+		margin: auto;
+		background: rgba(204, 204, 204, 0.9);
+		text-decoration: none;
+		font-style: italic;
+		font-size: 23px;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.listgen {
+		width: 30%;
+		margin: auto;
+		display: inline-flex;
+		text-align: center;
+		align-content: center;
+	}
+</style>
+{% endblock %} {% block content %}
+<br /><br /><br />
+<div class="boxtable">
+	{% for it in gen %}
+	<div class="listgen">
+		<a href="/Genres/{{it}}" style="text-decoration: none; color: black;"
+			>{{it}}
+		</a>
+	</div>
+	{% endfor %}
+</div>
+<br /><br /><br /><br />
+{% endblock %}
